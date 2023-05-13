@@ -2,6 +2,11 @@
     --main-font-family: 'Roboto', sans-serif;
     --secondary-font-family-family: 'Raleway', sans-serif;
 }
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #434455;
+    background-color: #FFFFFF;
+}
 .list {
     list-style: none;
 }
@@ -43,9 +48,14 @@ button {
     padding-left: 15px;
     padding-right: 15px;
 }
+
+/* ================= /HEADER ================= */
+
 .page-header {
     display: flex;
     border-bottom: 1px solid #E7E9FC;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
+        0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .page-header-container {
     display: flex;
@@ -85,11 +95,6 @@ button {
 .span-studio {
     color: #2E2F42;
 }
-body {
-    font-family: 'Roboto',sans-serif;
-    color: #434455;
-    background-color: #FFFFFF;
-}
 .menu-link {
     font-weight: 500;
     font-size: 16px;
@@ -117,17 +122,24 @@ address {
 .contact:focus {
     color: #404BBF;
 }
+
+/* ================= /HERO ================= */
+
 .hero-section {
     background-color: #2E2F42;
     text-align: center;
     align-items: center;
     padding-top: 188px;
     padding-bottom: 188px;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
         url(../images/hero/bg-hero.jpg);
-    background-size: cover;
     background-repeat: no-repeat;
-}
+    background-position: center;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    }
 .hero-title {
     font-weight: 700;
     font-size: 56px;
@@ -161,6 +173,9 @@ address {
 .modal-open-btn:focus {
     background: #404BBF;
 }
+
+/* ================= /ABOUT COMPANY ================= */
+
 .about-company {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -169,6 +184,9 @@ address {
     color: #2e2f42;
 }
 .icon-about-company {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #F4F4FD;
     border-radius: 4px;
     width: 264px;
@@ -178,7 +196,6 @@ address {
 .feature-link {
     display: flex;
     justify-content: center;
-    padding-top: 24px;
 }
 .about-company-list {
     display: flex;
@@ -186,9 +203,6 @@ address {
 }
 .about-company-item {
     flex-basis: calc((100% - 72px) / 4);
-}
-.advantages-icon {
-    
 }
 .advantages {
     font-weight: 500;
@@ -205,6 +219,9 @@ address {
     letter-spacing: 0.02em;
     color: #434455;
 }
+
+/* ================= /OUR WORKS ================= */
+
 .our-works {
     padding-top: 0;
     padding-bottom: 120px;
@@ -228,6 +245,9 @@ address {
     border: 1px solid #E7E9FC;
     width: calc((100% - 48px) / 3);
 }
+
+/* ================= /OUR TEAM ================= */
+
 .our-team {
     background: #F4F4FD;
     padding-bottom: 120px;
@@ -254,10 +274,13 @@ address {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
-    padding: 32px 16px;
+    padding: 32px 0px;
 }
 .our-team-item {
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+            0px 1px 1px rgba(46, 47, 66, 0.16),
+            0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .name-person {
     font-weight: 500;
@@ -280,9 +303,8 @@ address {
 .social-list {
     display: flex;
     justify-content: center;
-    column-gap: 24px;
+    gap: 24px;
 }
-
 .social-list-link {
     display: flex;
     justify-content: center;
@@ -291,6 +313,9 @@ address {
     height: 40px;
     border-radius: 50%;
     background: #4D5AE5;
+}
+.social-list-icon {
+    fill: #f4f4fd;
 }
 .social-list-link:hover,
 .social-list-link:focus {
@@ -308,6 +333,7 @@ address {
     font-size: 36px;
     line-height: 40px;
     text-align: center;
+    line-height: 1.1;
     letter-spacing: 0.02em;
     color: #2E2F42;
     margin-left: auto;
@@ -329,14 +355,16 @@ address {
     height: 88px;
     border: 1px solid #8E8F99;
     border-radius: 4px;
+    color: #8E8F99;
 }
 .customers-logo-link:hover,
 .customers-logo-link:focus {
     border: 1px solid #404BBF;
     border-radius: 4px;
+    color: #404BBF;
 }
 .customers-icon {
-    fill: #8E8F99;
+    fill: currentColor;
 }
 .customers-icon:hover,
 .customers-icon:focus  {
@@ -347,6 +375,7 @@ address {
 
 .page-footer {
     display: flex;
+    align-items: baseline;
     background-color:#2E2F42;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -378,7 +407,7 @@ address {
 }
 .social-list-footer {
     display: flex;
-    column-gap: 16px;
+    gap: 16px;
 }
 .description-social-media{
     font-weight: 500;
@@ -398,9 +427,14 @@ address {
     background: #4D5AE5;
 }
 .social-list-link-footer:hover,
-.social-list-footer:focus {
+.social-list-link-footer:focus {
    background-color: #31D0AA;
 }
+.social-list-icon-footer {
+    fill: #f4f4fd;
+}
+
+
 .filters {
     padding: 96px 0 120px;
 }
