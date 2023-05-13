@@ -400,10 +400,12 @@ address {
 }
 .all-footer {
     display: flex;
-    align-items: baseline;
 }
 .footer-container {
     margin-right: 120px;
+}
+.footer-social-media {
+    align-items: baseline;
 }
 .social-list-footer {
     display: flex;
